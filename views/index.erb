@@ -1,0 +1,19 @@
+
+<%= game.keyword.show_hidden_keyword %>
+<% game.alphabet.alphabet_hash.each do |letter,color| %>
+  <% if color == 'red' %>
+   <span style="color:red"><%= letter %></span>
+  <% else %>
+   <span style="color:green"><%= letter %></span>
+  <% end %>
+<% end %>
+<p>Yaşam: <%=game.life%></p>
+<form action='/' method='POST'>
+<p>Harf Girin:</p>
+<input type='text' name='letter'>
+<input type='submit'>
+</form>
+<form action='/' method='POST'>
+<input type='submit' name='new' value='Yeni Kelime'>
+</form>
+<%= info %>
